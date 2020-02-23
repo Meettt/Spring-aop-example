@@ -28,7 +28,7 @@ public class BeforeAspect {
         System.out.println(ex + " in method -> " + joinPoint.getSignature().toString());
     }
 
-    @AfterReturning(pointcut = "execution(public String com.example..*(..))", returning = "returnValue",)
+    @AfterReturning(pointcut = "execution(public String com.example..*(..))", returning = "returnValue")
     public void afterMethodReturnString(String returnValue) {
         System.out.println("Return Value of Method ->  = "+ returnValue);
     }
